@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+package core;
+import java.util.Scanner;
+
+class BusinessMan{
+	private float si;
+	private float p;
+	private float t;
+	static private float r;
+	
+	static {
+		r=15.2f;
+	}
+	
+	public void accepInput() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the Principle amount");
+		p=scan.nextFloat();
+		System.out.println("Enter the Tenure");
+		t=scan.nextFloat();
+		r=15.2f;
+	}
+	
+		public void calculate(){
+			si=(p*t*r)/100;
+		}
+			
+		public void disp() {
+			System.out.println(si);
+		}
+}
+			
+	
+public class Day34 {
+
+	public static void main(String[] args) {
+		BusinessMan b=new BusinessMan();
+		b.accepInput();
+		b.calculate();
+		b.disp();
+		
+		BusinessMan b1=new BusinessMan();
+		b1.accepInput();
+		b1.calculate();
+		b1.disp();
+		
+		BusinessMan b2=new BusinessMan();
+		b2.accepInput();
+		b2.calculate();
+		b2.disp();
+		
+	}
+
+}
+
+
+	
+	
