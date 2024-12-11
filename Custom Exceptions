@@ -1,0 +1,118 @@
+package core;
+import java.util.Scanner;
+
+class InvalidPinException extends Exception{
+	
+}
+class Atm{
+	int pin = 123456;
+	int p;
+	
+	
+	public void AccepInput() {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the pin");
+		p=scan.nextInt();
+	}
+	public void verify() throws Exception{
+		if(pin==p) {
+			System.out.println("Collect the money");
+		}
+		else {
+			System.out.println("Invalid Pin");
+			InvalidPinException ipe=new  InvalidPinException();
+			throw ipe;
+		}
+	}
+}
+
+
+class Bank{
+	public void init() {
+		Atm a=new Atm();
+		try {
+			a.AccepInput();
+			a.verify();
+		}
+		catch(Exception e) {
+			try{
+				a.AccepInput();
+				a.verify();
+			}
+			catch(Exception f) {
+				try {
+				a.AccepInput();
+				a.verify();
+			}
+		catch(Exception g) {
+			System.out.println("Card Blocked < Please Contact Bank");	
+			}
+			}
+			}
+			}
+			}
+
+public class Rbi {
+
+	public static void main(String[] args) {
+
+		Bank b=new Bank();
+		b.init();
+
+	
+	}	
+}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
